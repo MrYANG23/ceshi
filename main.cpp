@@ -21,25 +21,40 @@ const int MAX=3;
 //    return 0;
 //}
 
+//int main()
+//{
+//    int var[MAX]={13,12,11};
+//    int *ptr;
+//
+//    ptr=&var[MAX-1];
+//    for (int i=MAX;i>0;i--)
+//    {
+//        cout<<"adress of var["<<i<<"]=";
+//        cout<<ptr<<endl;
+//
+//        cout<<"value of var["<<i<<"]=";
+//        cout<<*ptr<<endl;
+//
+//        ptr--;
+//    }
+//
+//
+//}
+
 int main()
 {
-    int var[MAX]={13,12,11};
-    int *ptr;
+    int var[MAX]={10,100,1000};
+    int *ptr[MAX];
 
-    ptr=&var[MAX-1];
-    for (int i=MAX;i>0;i--)
+    for (int  i = 0;  i <3 ; ++ i)
     {
-        cout<<"adress of var["<<i<<"]=";
-        cout<<ptr<<endl;
+        ptr[i]=&var[i];
 
         cout<<"value of var["<<i<<"]=";
-        cout<<*ptr<<endl;
 
-        ptr--;
+        cout<<*ptr[i]<<"\n"<<endl;
 
 
     }
-
-
+    return 0;
 }
-
