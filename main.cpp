@@ -41,20 +41,38 @@ const int MAX=3;
 //
 //}
 
+//int main()
+//{
+//    int var[MAX]={10,100,1000};
+//    int *ptr[MAX];
+//
+//    for (int  i = 0;  i <3 ; ++ i)
+//    {
+//        ptr[i]=&var[i];
+//
+//        cout<<"value of var["<<i<<"]=";
+//
+//        cout<<*ptr[i]<<"\n"<<endl;
+//
+//
+//    }
+//    return 0;
+//}
+
+
+
 int main()
 {
-    int var[MAX]={10,100,1000};
-    int *ptr[MAX];
+    int var;
+    int *ptr;
+    int **pptr;
+    var=3000;
+    ptr=&var;
+    pptr=&ptr;
 
-    for (int  i = 0;  i <3 ; ++ i)
-    {
-        ptr[i]=&var[i];
-
-        cout<<"value of var["<<i<<"]=";
-
-        cout<<*ptr[i]<<"\n"<<endl;
-
-
-    }
+    cout<<"var:"<<var;
+    cout<<"&var:"<<ptr;
+    cout<<"&&var:"<<pptr<<endl;
     return 0;
+
 }
