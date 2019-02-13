@@ -74,5 +74,6 @@ int main()
     cout<<"&var:"<<ptr;
     cout<<"&&var:"<<pptr<<endl;
     return 0;
+    
 
 }
