@@ -60,20 +60,63 @@ const int MAX=3;
 //}
 
 
+//
+//int main()
+//{
+//    int var;
+//    int *ptr;
+//    int **pptr;
+//    var=3000;
+//    ptr=&var;
+//    pptr=&ptr;
+//
+//    cout<<"var:"<<var;
+//    cout<<"&var:"<<ptr;
+//    cout<<"&&var:"<<pptr<<endl;
+//    return 0;
+//
+//
+//}
+
+//fan hui yin yong
+double vars[]={10,20,30,40,50};
+
+double& setvalues(int i)
+{
+    return vars[i];
+}
 
 int main()
 {
-    int var;
-    int *ptr;
-    int **pptr;
-    var=3000;
-    ptr=&var;
-    pptr=&ptr;
+    cout<<"before change value"<<endl;
+    for (int i=0;i<5;i++)
+    {
+        cout<<"value["<<i<<"]=";
+        cout<<vars[i]<<endl;
+    }
 
-    cout<<"var:"<<var;
-    cout<<"&var:"<<ptr;
-    cout<<"&&var:"<<pptr<<endl;
+    setvalues(1)=21;
+    setvalues(3)=41;
+
+    for (int i=0;i<5;i++)
+    {
+        cout<<"changed value["<<i<<"]=";
+        cout<<vars[i]<<endl;
+
+    }
+
     return 0;
-    
-
 }
+
+//debug:
+//before change value
+//        value[0]=10
+//value[1]=20
+//value[2]=30
+//value[3]=40
+//value[4]=50
+//changed value[0]=10
+//changed value[1]=21
+//changed value[2]=30
+//changed value[3]=41
+//changed value[4]=50
